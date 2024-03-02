@@ -423,11 +423,10 @@ let g:neosnippet#snippets_directory='~/dotfiles/snippets'
 " -----------------------------------------------------------------
 " マップ定義      "{{{
 " 色の比較検討
-nnoremap <silent> cl :<C-u>Unite colorscheme -auto-preview<CR>
+" nnoremap <silent> cl :<C-u>Unite colorscheme -auto-preview<CR>
 
 "" インサートモードでフルパスを挿入
-" inoremap <Leader>path <C-R>=expand('%:p')<CR>
-inoremap <silent>path <C-R>=expand('%:p')<CR>
+" inoremap <silent>path <C-R>=expand('%:p')<CR>
 
 " NERDTree
 nnoremap <silent> nt :<C-u>NERDTreeToggle<CR>
@@ -641,7 +640,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " vim-ref PHP等のマニュアル
-let g:ref_phpmanual_path = $HOME . '/dotfiles/.env/dest/php-chunked-xhtml'
+" let g:ref_phpmanual_path = $HOME . '/dotfiles/.env/dest/php-chunked-xhtml'
 
 " 起動時のメッセージを表示しない
 set shortmess+=I
