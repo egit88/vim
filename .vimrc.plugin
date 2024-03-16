@@ -1,139 +1,186 @@
 """"""""""""""""""
-""" .vimrc.local
+""" .vimrc.plugin
 """"""""""""""""""
-" set nonumber
 
-"NeoBundle Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+call plug#begin()
 
-" Required:
-set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+Plug 'vim-denops/denops.vim'
 
-" Required:
-call neobundle#begin(expand('$HOME/.vim/bundle'))
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'Shougo/ddc.vim'
+Plug 'Shougo/ddc-ui-native'
+Plug 'Shougo/ddc-around'
+Plug 'matsui54/ddc-buffer'
+Plug 'shun/ddc-source-vim-lsp'
+Plug 'tani/ddc-fuzzy'
 
-" Required:
-filetype plugin indent on
+"  Plug 'Shougo/pum.vim'
+Plug 'LumaKernel/ddc-file'
+Plug 'Shougo/ddc-matcher_head'
+Plug 'Shougo/ddc-sorter_rank'
+Plug 'Shougo/ddc-converter_remove_overlap'
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+Plug 'tani/vim-jetpack', {'opt': 1} "bootstrap
+Plug 'altercation/vim-colors-solarized'
+Plug 'croaker/mustang-vim'
+Plug 'jeffreyiacono/vim-colors-wombat'
+Plug 'nanotech/jellybeans.vim'
+Plug 'vim-scripts/Lucius'
+Plug 'vim-scripts/Zenburn'
+Plug 'mrkn/mrkn256.vim'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'therubymug/vim-pyte'
+Plug 'mhinz/vim-startify'
+Plug 'egit78/emmet-vim'
+Plug 't9md/vim-choosewin'
+Plug 'nanotech/jellybeans.vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'vim-scripts/twilight'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/Wombat'
+Plug 'tomasr/molokai'
+Plug 'vim-scripts/rdark'
+Plug 'fuenor/im_control.vim'
+Plug 'vim-scripts/peaksea'
+Plug 'vim-scripts/vibrantink'
+Plug 'vim-scripts/graywh'
+Plug 'vim-scripts/underwater-mod'
+Plug 'vim-scripts/railscasts'
+Plug 'vim-scripts/256-jungle'
+Plug 'vim-scripts/inkpot'
+Plug 'vim-scripts/maroloccio'
+Plug 'vim-scripts/fu'
+Plug 'vim-scripts/tir_black'
+Plug 'vim-scripts/symfony'
+Plug 'sjl/badwolf'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'itchyny/landscape.vim'
+Plug 'jwalton512/vim-blade'
+" Plug 'rayburgemeestre/phpfolding.vim'
+"
+Plug 'Shougo/unite.vim'
+" Plug 'Shougo/vimshell'
+Plug 'Shougo/vimproc'
+Plug 'Shougo/vimfiler'
+" Plug 'Shougo/neocomplcache'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+"
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'LeafCage/foldCC'
+Plug 'itchyny/lightline.vim'
+Plug 'ujihisa/unite-colorscheme'
+Plug 'simeji/winresizer'
+Plug 'airblade/vim-gitgutter'
+Plug 'gregsexton/gitv'
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/syntastic'
+Plug 'thinca/vim-ref'
+Plug 'tpope/vim-surround'
 
-" filetype off
-" if has('vim_starting')
-"     set runtimepath+=~/.vim/bundle/neobundle.vim/
-" endif
+call plug#end()
 
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/unite.vim'
-" NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'LeafCage/foldCC'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'simeji/winresizer'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'gregsexton/gitv'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'tpope/vim-surround'
-
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'croaker/mustang-vim'
-NeoBundle 'jeffreyiacono/vim-colors-wombat'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'vim-scripts/Lucius'
-NeoBundle 'vim-scripts/Zenburn'
-NeoBundle 'mrkn/mrkn256.vim'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'therubymug/vim-pyte'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'egit78/emmet-vim'
-NeoBundle 't9md/vim-choosewin'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'vim-scripts/twilight'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-scripts/Wombat'
-NeoBundle 'wombat256.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'vim-scripts/rdark'
-NeoBundle 'fuenor/im_control.vim'
-NeoBundle 'vim-scripts/peaksea'
-NeoBundle 'vim-scripts/vibrantink'
-NeoBundle 'vim-scripts/graywh'
-NeoBundle 'vim-scripts/underwater-mod'
-NeoBundle 'vim-scripts/railscasts'
-NeoBundle 'vim-scripts/256-jungle'
-NeoBundle 'vim-scripts/inkpot'
-NeoBundle 'vim-scripts/maroloccio'
-NeoBundle 'vim-scripts/fu'
-NeoBundle 'vim-scripts/tir_black'
-NeoBundle 'vim-scripts/symfony'
-NeoBundle 'sjl/badwolf'
-NeoBundle 'marciomazza/vim-brogrammer-theme'
-NeoBundle 'NLKNguyen/papercolor-theme'
-NeoBundle 'itchyny/landscape.vim'
-NeoBundle 'jwalton512/vim-blade'
-NeoBundle 'rayburgemeestre/phpfolding.vim'
-
-call neobundle#end()
-NeoBundleCheck
 
 " デフォルトのカラースキーム
 set t_Co=256 " 256色
 " set background=light
 " colorscheme Tomorrow
-set t_ut=  " tmuxでの背景描画対策
 set background=dark
-colorscheme slate
 colorscheme landscape
 colorscheme Tomorrow-Night-Bright
 colorscheme badwolf
 colorscheme molokai
+colorscheme slate
 set t_ut=y   " tmuxでの背景描画対策
 
-" タブ関係 "{{{
-set showtabline=2 " 常にタブラインを表示
-" The prefix key.
-nnoremap	[Tag]	  <Nop>
-nmap	t [Tag]
-" Tab jump
-for n in range(1, 9)
-    execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
-endfor
-" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ（数字gtでも同じだが）
+" ddc
+"===================================
+" Ddc Settings
+"===================================
+call ddc#custom#patch_global({
+\	'ui': 'native',
+\	'sources': [
+\		'vim-lsp',
+\		'around',
+\		'buffer',
+\	],
+\	'sourceOptions': {
+\		'_': {
+\			'matchers'  : ['matcher_fuzzy'],
+\			'sorters'   : ['sorter_fuzzy'],
+\			'converters': ['converter_fuzzy'],
+\			'ignoreCase': v:true,
+\		},
+\		'around': {
+\			'mark': '[Arround]',
+\		},
+\		'buffer': {
+\			'mark': '[Buffer]',
+\		},
+\		'vim-lsp': {
+\			'mark': '[LSP]',
+\			'forceCompletionPattern': '\.\w*|:\w*|->\w*',
+\		},
+\	},
+\	'sourceParams': {
+\		'around': { 'maxSize': 500 },
+\		'buffer': {
+\			'limitBytes': 5000000,
+\			'forceCollect': v:true,
+\			'fromAltBuf': v:true,
+\		},
+\	 },
+\})
 
-map <silent> [Tag]c :tabnew<CR>
-map <silent> [Tag]d :tabclose<CR>
-map <silent> [Tag]n :tabnext<CR>
-map <silent> [Tag]p :tabpourevious<CR>
-map <silent> [Tag]l :tablast<CR>
-map <silent> [Tag]f :tabfirst<CR>
+call ddc#custom#patch_global('sources', ['file'])
+call ddc#custom#patch_global('sourceOptions', {
+    \ 'file': {
+    \   'mark': 'F',
+    \   'isVolatile': v:true,
+    \   'forceCompletionPattern': '\S/\S*',
+    \ }})
+call ddc#custom#patch_filetype(
+    \ ['ps1', 'dosbatch', 'autohotkey', 'registry'], {
+    \ 'sourceOptions': {
+    \   'file': {
+    \     'forceCompletionPattern': '\S\\\S*',
+    \   },
+    \ },
+    \ 'sourceParams': {
+    \   'file': {
+    \     'mode': 'win32',
+    \   },
+    \ }})
 
-" 直近のタブに移動
-map <silent> [Tag]r :TabRecent<CR>"
-"}}}
+" call ddc#custom#patch_global('sourceOptions', {
+"  \ '_': {
+"  \   'matchers': ['matcher_head'],
+"  \   'sorters': ['sorter_rank'],
+"  \   'converters': ['converter_remove_overlap'],
+"  \ }})
 
-" gitgutter 行番号の左側にdiffの+-とかが表示されるようにする ([c と ]c で前後のHunkに移動できる)
-let g:gitgutter_sign_modified = 'M'
+call ddc#enable()
+
+"===================================
+" LSP Settings
+"===================================
+nnoremap <Leader>li :LspManageServers<CR>
+nnoremap <Leader>LI :LspInstallServer<CR>
+nnoremap <Leader>ls :LspStatus<CR>
+nnoremap <Leader>lh :LspHover<CR>
+nnoremap ]d :LspNextDiagnostic<CR>
+nnoremap [d :LspPreviousDiagnostic<CR>
+nnoremap ]e :LspNextError<CR>
+nnoremap [e :LspPreviousError<CR>
+nnoremap <C-]> :LspDefinition<CR>
+
 " choosewin"{{{
 " '-' で呼び出し
 nmap  -  <Plug>(choosewin)
@@ -158,80 +205,7 @@ let g:choosewin_blink_on_land		 = 0 " 頼むから着地時にカーソル点滅
 let g:choosewin_statusline_replace = 0 " どうかステータスラインリプレイスしないで下さい!
 let g:choosewin_tabline_replace    = 0 " どうかタブラインもリプレイスしないでいただきたい！
 "}}}
-" 検索関係 "{{{
-source $VIMRUNTIME/macros/matchit.vim
-" 検索結果を中心に
-" nmap n nzz
-" nmap N Nzz
-" インクリメンタル検索
-" set incsearch
-" 検索にマッチしたすべてのテキストをハイライト
-set hlsearch
-" 検索時に大文字小文字を無視 (noignorecase:無視しない)
-set ignorecase
-" 大文字小文字の両方が含まれている場合は大文字小文字を区別
-set smartcase
-" 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
-" set nowrapscan
-" コマンド、検索パターンを100個まで履歴に残す
-set history=100
-" ESCを二回押すことでハイライトを消す
-nmap <silent> <ESC><ESC> :nohlsearch<CR>
-"}}}
-" 文字コード関連のコピペ設定 "{{{
-"
-if &encoding !=# 'utf-8'
-    set encoding=japan
-    set fileencoding=japan
-endif
-if has('iconv')
-    let s:enc_euc = 'euc-jp'
-    let s:enc_jis = 'iso-2022-jp'
-    " iconvがeucJP-msに対応しているかをチェック
-    if iconv("\x87\x64\x87\x6a", 'cp932', 'eucjp-ms') ==# "\xad\xc5\xad\xcb"
-        let s:enc_euc = 'eucjp-ms'
-        let s:enc_jis = 'iso-2022-jp-3'
-        " iconvがJISX0213に対応しているかをチェック
-    elseif iconv("\x87\x64\x87\x6a", 'cp932', 'euc-jisx0213') ==# "\xad\xc5\xad\xcb"
-        let s:enc_euc = 'euc-jisx0213'
-        let s:enc_jis = 'iso-2022-jp-3'
-    endif
-    " fileencodingsを構築
-    if &encoding ==# 'utf-8'
-        let s:fileencodings_default = &fileencodings
-        let &fileencodings = s:enc_jis .','. s:enc_euc .',cp932'
-        let &fileencodings = 'utf-8,'. &fileencodings .','. s:fileencodings_default
-        unlet s:fileencodings_default
-    else
-        let &fileencodings = &fileencodings .','. s:enc_jis
-        set fileencodings+=utf-8,ucs-2le,ucs-2
-        if &encoding =~# '^\(euc-jp\|euc-jisx0213\|eucjp-ms\)$'
-            set fileencodings+=cp932
-            set fileencodings-=euc-jp
-            set fileencodings-=euc-jisx0213
-            set fileencodings-=eucjp-ms
-            let &encoding = s:enc_euc
-            let &fileencoding = s:enc_euc
-        else
-            let &fileencodings = &fileencodings .','. s:enc_euc
-        endif
-    endif
-    " 定数を処分
-    unlet s:enc_euc
-    unlet s:enc_jis
-endif
-" 日本語を含まない場合は fileencoding に encoding を使うようにする
-if has('autocmd')
-    function! AU_ReCheck_FENC()
-        if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
-            let &fileencoding=&encoding
-        endif
-    endfunction
-    autocmd BufReadPost * call AU_ReCheck_FENC()
-endif
-" 改行コードの自動認識
-set fileformats=unix,dos,mac
-"}}}
+
 " unite {{{
 
 " unite prefix key.
@@ -290,6 +264,7 @@ function! s:unite_my_settings()
 endfunction
 
 "}}}
+
 " vimfiler {{{
 "vimデフォルトのエクスプローラをvimfilerで置き換える
 let g:vimfiler_as_default_explorer = 1
@@ -310,99 +285,135 @@ function! s:vimfiler_my_settings()
     nmap <buffer> Q <Plug>(vimfiler_hide)
 endfunction
 "}}}
-" neocomplecache"{{{
-"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
-" Enable heavy features.
-" Use camel case completion.
-"" let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-"" let g:neocomplcache_enable_underbar_completion = 1
+""" " neocomplecache"{{{
 
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
+""" "" neocomplcache
+""" " Disable AutoComplPop.
+""" let g:acp_enableAtStartup = 0
+""" " Use neocomplcache.
+""" let g:neocomplcache_enable_at_startup = 1
+""" " Use smartcase.
+""" let g:neocomplcache_enable_smart_case = 1
+""" " Set minimum syntax keyword length.
+""" let g:neocomplcache_min_syntax_length = 3
+""" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"""
+""" " Define dictionary.
+""" let g:neocomplcache_dictionary_filetype_lists = {
+"""     \ 'default' : ''
+"""     \ }
+"""
+""" " Plugin key-mappings.
+""" inoremap <expr><C-g>     neocomplcache#undo_completion()
+""" inoremap <expr><C-l>     neocomplcache#complete_common_string()
+"""
+""" " Recommended key-mappings.
+""" " <CR>: close popup and save indent.
+""" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+""" function! s:my_cr_function()
+"""   return neocomplcache#smart_close_popup() . "\<CR>"
+""" endfunction
+""" " <TAB>: completion.
+""" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+""" " <C-h>, <BS>: close popup and delete backword char.
+""" inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+""" inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+""" inoremap <expr><C-y>  neocomplcache#close_popup()
+""" inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
-""" " Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+""" "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+""" " Disable AutoComplPop.
+""" let g:acp_enableAtStartup = 0
+""" " Use neocomplcache.
+""" let g:neocomplcache_enable_at_startup = 1
+""" " Use smartcase.
+""" let g:neocomplcache_enable_smart_case = 1
+""" " Set minimum syntax keyword length.
+""" let g:neocomplcache_min_syntax_length = 3
+""" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"""
+""" " Enable heavy features.
+""" " Use camel case completion.
+""" "" let g:neocomplcache_enable_camel_case_completion = 1
+""" " Use underbar completion.
+""" "" let g:neocomplcache_enable_underbar_completion = 1
+"""
+""" " Define dictionary.
+""" "let g:neocomplcache_dictionary_filetype_lists = {
+""" "            \ 'default' : '',
+""" "            \ 'scheme' : $HOME.'/.gosh_completions'
+""" "            \ }
+"""
+""" """ " Define keyword.
+""" if !exists('g:neocomplcache_keyword_patterns')
+"""     let g:neocomplcache_keyword_patterns = {}
+""" endif
+""" let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+"""
+""" " Plugin key-mappings.
+""" inoremap <expr><C-g>	 neocomplcache#undo_completion()
+""" inoremap <expr><C-l>	 neocomplcache#complete_common_string()
+"""
+""" " Recommended key-mappings.
+""" " <CR>: close popup and save indent.
+""" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+""" function! s:my_cr_function()
+"""     return neocomplcache#smart_close_popup() . "\<CR>"
+"""     " For no inserting <CR> key.
+"""     "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+""" endfunction
+""" " <TAB>: completion.
+""" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+""" " <C-h>, <BS>: close popup and delete backword char.
+""" inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+""" inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+""" inoremap <expr><C-y>  neocomplcache#close_popup()
+""" inoremap <expr><C-e>  neocomplcache#cancel_popup()
+""" " Close popup by <Space>.
+""" "inoremap <expr><Space> pumvisible() ? neocomplcache#close_popup() : "\<Space>"
+"""
+""" " For cursor moving in insert mode(Not recommended)
+""" "inoremap <expr><Left>		neocomplcache#close_popup() . "\<Left>"
+""" "inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
+""" "inoremap <expr><Up>	neocomplcache#close_popup() . "\<Up>"
+""" "inoremap <expr><Down>		neocomplcache#close_popup() . "\<Down>"
+""" " Or set this.
+""" "let g:neocomplcache_enable_cursor_hold_i = 1
+""" " Or set this.
+""" "let g:neocomplcache_enable_insert_char_pre = 1
+"""
+""" " AutoComplPop like behavior.
+""" "let g:neocomplcache_enable_auto_select = 1
+"""
+""" " Shell like behavior(not recommended).
+""" "set completeopt+=longest
+""" "let g:neocomplcache_enable_auto_select = 1
+""" "let g:neocomplcache_disable_auto_complete = 1
+""" "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+"""
+""" " Enable omni completion.
+""" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+""" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+""" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+""" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+""" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"""
+""" " Enable heavy omni completion.
+""" "" if !exists('g:neocomplcache_omni_patterns')
+""" "" 	let g:neocomplcache_omni_patterns = {}
+""" "" endif
+""" "" let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+""" "" let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+""" "" let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+"""
+""" " For perlomni.vim setting.
+""" " https://github.com/c9s/perlomni.vim
+""" " let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+"""
+""" "}}}
 
-" Plugin key-mappings.
-inoremap <expr><C-g>	 neocomplcache#undo_completion()
-inoremap <expr><C-l>	 neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplcache#smart_close_popup() . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplcache#close_popup() : "\<Space>"
-
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>		neocomplcache#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
-"inoremap <expr><Up>	neocomplcache#close_popup() . "\<Up>"
-"inoremap <expr><Down>		neocomplcache#close_popup() . "\<Down>"
-" Or set this.
-"let g:neocomplcache_enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplcache_enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplcache_enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-"" if !exists('g:neocomplcache_omni_patterns')
-"" 	let g:neocomplcache_omni_patterns = {}
-"" endif
-"" let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"" let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"" let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-" let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-"}}}
-
+" neosnippet{{{
 " Plugin key-mappings.
 imap <C-k>	   <Plug>(neosnippet_expand_or_jump)
 smap <C-k>	   <Plug>(neosnippet_expand_or_jump)
@@ -419,76 +430,9 @@ if has('conceal')
     set conceallevel=2 concealcursor=niv
 endif
 let g:neosnippet#snippets_directory='~/dotfiles/snippets'
-
-" -----------------------------------------------------------------
-" マップ定義      "{{{
-" 色の比較検討
-" nnoremap <silent> cl :<C-u>Unite colorscheme -auto-preview<CR>
-
-"" インサートモードでフルパスを挿入
-" inoremap <silent>path <C-R>=expand('%:p')<CR>
-
-" NERDTree
-nnoremap <silent> nt :<C-u>NERDTreeToggle<CR>
-"
-"バッファ移動用キーマップ
-" F2: 前のバッファ
-" F3: 次のバッファ
-" F4: バッファ削除
-map <F2> <ESC>:bp<CR>
-map <F3> <ESC>:bn<CR>
-map <F4> <ESC>:bw<CR>
-"表示行単位で行移動する
-nnoremap j gj
-onoremap j gj
-xnoremap j gj
-nnoremap k gk
-onoremap k gk
-xnoremap k gk
-nnoremap <Down> gj
-onoremap <Down> gj
-xnoremap <Down> gj
-nnoremap <Up> gk
-onoremap <Up> gk
-xnoremap <Up> gk
-" C-a, C-eで行頭行末に移動する
-inoremap <C-a> <ESC>^i
-inoremap <C-e> <ESC>$i
-"フレームサイズを怠惰に変更する
-map <kPlus> <C-W>+
-map <kMinus> <C-W>-
-"インデント操作後も選択範囲を保つ
-vnoremap > >gv
-vnoremap < <gv
-
-" インデントが同じかそれより深い範囲を選択する
-function! VisualCurrentIndentBlock()
-    let current_indent = indent('.')
-    let current_line   = line('.')
-    let current_col  = col('.')
-    let last_line	   = line('$')
-
-    let start_line = current_line
-    let end_line = current_line
-    while start_line != 1 && ( current_indent <= indent(start_line - 1) || getline(start_line - 1) =~ '^\s*$' )
-        let start_line = start_line - 1
-    endwhile
-    while end_line != last_line && ( current_indent <= indent(end_line + 1) || getline(end_line + 1) =~ '^\s*$' )
-        let end_line = end_line + 1
-    endwhile
-
-    call cursor(start_line, current_col)
-    normal V
-    call cursor(end_line, current_col)
-endfunction
-
-nnoremap gi :call VisualCurrentIndentBlock()<CR>
-onoremap gi :normal gi<CR>
-
 "}}}
-" -----------------------------------------------------------------
 
-" lightline
+" lightline{{{
 command! -bar LightlineUpdate	   call lightline#init()|
             \ call lightline#colorscheme()|
             \ call lightline#update()
@@ -552,136 +496,9 @@ endfunction
 
 function! LightLineMode()
     return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
+endfunction"}}}
 
-" *.foo を bar ファイルとして
-au BufNewFile,BufRead *.memo setf memo
-au BufNewFile,BufRead *.md setf markdown
-" TODO .md ファイルで、set fdm=marker しないと謎の折り畳みが消えない
-
-" IME状態に応じたカーソル色を設定:
-if has('multi_byte_ime')
-    highlight Cursor guifg=#000d18 guibg=#8faf9f gui=bold
-    highlight CursorIM guifg=NONE guibg=#ecbcbc
-endif
-" PHP辞書ファイル指定
-autocmd FileType php,ctp :set dictionary=~/.vim/dict/php.dict
-" PHPの関数やクラスの折りたたみ
-let php_folding = 0
-autocmd BufNewFile,BufRead *.ctp set filetype=php
-let php_htmlInStrings=1
-
-"blade
-autocmd BufNewFile,BufRead *.php set ft=html | set ft=php
-autocmd BufNewFile,BufRead *.blade.php set ft=blade.html.php
-
-" スワップファイルを作成しない
-set noswapfile
-" スワップファイル用のディレクトリ
-"set directory=$HOME/vimbackup
-" バックアップファイルを作成しない
-set nobackup
-set clipboard=unnamed
-
-" set paste してからノーマルモードに抜けるとき nopaste
-" autocmd InsertLeave * set nopaste
-
-" 文字コード指定
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
-set fileencoding=utf8
-" 改行コードの自動認識
-set fileformats=unix,dos,mac
-
-" 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
-set showmatch
-" 対応する括弧の表示時間を2にする
-set matchtime=2
-" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
-set wildmenu
-" テキスト挿入中の自動折り返しを日本語に対応させる
-set formatoptions+=mM
-" スクロールする時に下が見えるようにする
-set scrolloff=5
-" 移動コマンドを使ったとき、行頭に移動しない
-set nostartofline
-
-" タブが対応する空白の数
-set tabstop=4
-" タブやバックスペースの使用等の編集操作をするときに、タブが対応する空白の数
-set softtabstop=4
-" インデントの各段階に使われる空白の数
-set shiftwidth=4
-
-" タブをスペースに展開する (noexpandtab:展開しない)
-set expandtab
-""" setl noexpandtab
-""" retab!
-" set noexpandtab
-
-" インデント
-" 自動的インデント (noautoindent:インデントしない)
-" 'autoindent'		一つ前の行に基づくインデント
-" 'smartindent' 'autoindent'と同様だが幾つかのC構文を認識し、適切な箇所のインデントを増減させる。
-" 'cindent' 他の2つの方法よりも賢く動作し、設定することで異なるインデントスタイルにも対応できる。
-" 'indentexpr'		この中で一番融通が利く: ある行のインデントを計算するのにVimスクリプトを実行する。
-" この方法が有効である(空でない)時にはその他 のインデントは抑制される。
-set cindent
-
-" syntax PHP文法チェック
-let g:syntastic_check_on_open = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_echo_current_error = 1
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_enable_highlighting = 1
-let g:syntastic_php_php_args = '-l'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" vim-ref PHP等のマニュアル
-" let g:ref_phpmanual_path = $HOME . '/dotfiles/.env/dest/php-chunked-xhtml'
-
-" 起動時のメッセージを表示しない
-set shortmess+=I
-
-" カーソルが遅くなる対策 http://stackoverflow.com/questions/4775605/vim-syntax-highlight-improve-performance
-set nocursorcolumn
-set nocursorline
-
-syntax sync minlines=256
-"ステータスラインに文字コードと改行文字を表示する
-set statusline=%<%f\ %m%=\ %{&ai?'[>]':''}%m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}\ %l,%c\ %P
-" GUI固有ではない画面表示の設定:
-" 行番号を表示
-set number
-" ルーラーを表示 (noruler:非表示)
-" set ruler
-" タブや改行を表示 (list:表示)
-" set list
-" 解除するときは set nolist
-"	tmux のコピーモード利用時は 注意 (nolist推奨）
-" どの文字でタブや改行を表示するかを設定
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-" 長い行を折り返して表示 (nowrap:折り返さない)
-set wrap
-" 常にステータス行を表示 (詳細は:he laststatus)
-set laststatus=2
-" コマンドラインの高さ (Windows用gvim使用時はgvimrcを編集すること)
-set cmdheight=1
-" タイトルを表示
-set title
-" 入力されているテキストの最大幅
-" (行がそれより長くなると、この幅を超えないように空白の後で改行される)を無効にする
-set textwidth=0
-" 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
-
-" バッファを切替えてもundoの効力を失わない
-set hidden
-
-" 折りたたみ"{{{
+" foldcc "{{{
 set foldmethod=marker
 set foldtext =FoldCCtext()
 let g:foldCCtext_head = ''
@@ -706,26 +523,12 @@ noremap [space]i zMzv " カーソルがあるところ以外のfoldingを閉じ�
 noremap [space]r zR " すべてのfoldingを開く
 noremap [space]f zf"
 noremap [space]d zd"
-
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr>
 "}}}
-" コメントストリング
-autocmd FileType html,xml set commentstring=<!--%s-->
 
-" 環境個別の設定を読み込む
-if filereadable(expand('~/.profile.d/.vimrc'))
-    source ~/.profile.d/.vimrc
-endif
-
-filetype plugin indent on " Required!
-syntax enable
-
-" Putty のタイトル文字列が Vim使用時に文字化けする
-set notitle
-
-" emmet
+" emmet{{{
   let g:user_emmet_settings = {
   \  'php' : {
   \    'extends' : 'html',
@@ -737,21 +540,5 @@ set notitle
   \  'haml' : {
   \    'extends' : 'html',
   \  },
-  \}
+  \}"}}}
 
-
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
-"ビープ音すべてを無効にする
-set visualbell t_vb=
-"エラーメッセージの表示時にビープを鳴らさない
-set noerrorbells
-set novisualbell
-"うるさい
-set belloff=all
-
-" Automatically strip trailing space
-autocmd BufWritePre * :%s/\s\+$//e
