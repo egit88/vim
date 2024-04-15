@@ -86,6 +86,13 @@ Plug 'thinca/vim-ref'
 Plug 'tpope/vim-surround'
 
 Plug 'tribela/vim-transparent'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'jdsimcoe/abstract.vim'
+"Plug 'pavoljuhas/oldfilesearch.vim'
+Plug 'dhruvasagar/vim-buffer-history'
+
+
 
 call plug#end()
 
@@ -102,7 +109,40 @@ colorscheme molokai
 colorscheme slate
 set t_ut=y   " tmuxでの背景描画対策
 
-" ddc
+"===================================
+""" Fern
+" Show hidden files
+let g:fern#default_hidden=1
+
+" Show file tree with Ctrl+n
+nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=35<CR>
+
+" Color
+colorscheme abstract
+
+" コマンド    説明
+" j, k    上下に移動する
+" l   フォルダを展開する、ファイルを開く
+" h   フォルダを閉じる
+" e   ファイルを開く
+" E   垂直分割してファイルを開く
+" t   新規タブでファイルを開く
+" Ctrl+m フォルダを開く
+" Ctrl+h  親ディレクトリに移動する
+" N   ファイルを新規作成する
+" K   ディレクトリを新規作成する
+" D   ファイルを削除する
+" m   ファイルを移動する
+" R   ファイル名を変更する
+" -   ファイルを選択する
+" C   ファイルをコピーする
+" P   ペーストする
+" M   ファイルをコピーし、ペーストした時に元のファイルを削除する
+" y   ファイルパスをコピーする
+" z   ファイル名に合わせてウィンドウ幅を広げる
+" !   隠しファイルを表示/非表示する
+
+
 "===================================
 " Ddc Settings
 "===================================
