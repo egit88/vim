@@ -1,0 +1,4 @@
+" FONT
+set guifont=HackGen_Console_NF:h16:cSHIFTJIS:qDRAFT
+set guifont=PlemolJP35_Console_NF:h16:cSHIFTJIS:qDRAFT
+set guifont=UDEV_Gothic_35NF:h16:cANSI:qDRAFT
