@@ -2,12 +2,14 @@
 """ _gvimrc
 """""""""""""""""""""
 " FONT
+" echo &guifont
 set guifont=HackGen_Console_NF:h16:cSHIFTJIS:qDRAFT
 set guifont=PlemolJP35_Console_NF:h16:cSHIFTJIS:qDRAFT
 set guifont=UDEV_Gothic_35NF:h16:cANSI:qDRAFT
+set guifont=UDEV_Gothic_35NF:h16:b:cANSI:qDRAFT
 
 " Transparency
-autocmd guienter * call libcallnr("vimtweak64","SetAlpha",200)
+autocmd guienter * call libcallnr("vimtweak64","SetAlpha",220)
 "Hide Tool bar
 set guioptions=im
 
