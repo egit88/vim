@@ -11,9 +11,11 @@ git remote set-url origin git@github.com:egit88/vim.git
 
 ### vim v9.0.2190 on Amazon linux 2
 # yum install luajit  luajit-devel lua-devel ruby-devel ncurses-devel
-### Ubuntu 22.04 LTS
+### Ubuntu 22.04 LTS, 24.04 LTS
 # luajit from source: https://luajit.org/install.html
-# apt install lua5.4
+#     git clone https://luajit.org/git/luajit.git
+# apt install build-essential
+# apt install lua5.1 liblua5.1-dev
 # apt install ruby-full
 
 ### plug.vim
